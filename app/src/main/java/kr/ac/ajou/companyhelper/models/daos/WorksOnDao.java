@@ -8,7 +8,12 @@ import kr.ac.ajou.companyhelper.models.WorksOn;
 /**
  * Created by huy on 2016. 11. 8..
  */
-public class WorksOnDao {
+public class WorksOnDao extends SqlDao<WorksOn> {
+
+  public WorksOnDao() {
+    super(WorksOn.class);
+  }
+
   public static boolean Dummy(String projectName) {
     try {
       WorksOn worksOn = new WorksOn(EmployeeDao.findOrCreate(), ProjectDao.Dummy(projectName));

@@ -39,6 +39,15 @@ public class Employee extends Model {
     return projects;
   }
 
+  public List<ToDo> getToDos() {
+    return getMany(ToDo.class, "employee");
+  }
+
+  public List<CommuteLog> getCommuteLogs() {
+    return getMany(CommuteLog.class, "employee");
+  }
+
+
   public String getEmail() {
     return email;
   }

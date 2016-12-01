@@ -7,13 +7,13 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_project_list"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="ProjectList" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_todo_list"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="TodoList" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

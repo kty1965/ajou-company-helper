@@ -1,9 +1,7 @@
-package kr.ac.ajou.companyhelper;
+package kr.ac.ajou.companyhelper.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,29 +11,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.activeandroid.ActiveAndroid;
+import kr.ac.ajou.companyhelper.R;
 import kr.ac.ajou.companyhelper.models.Employee;
-import kr.ac.ajou.companyhelper.models.Project;
-import kr.ac.ajou.companyhelper.models.WorksOn;
 import kr.ac.ajou.companyhelper.models.daos.EmployeeDao;
 import kr.ac.ajou.companyhelper.models.daos.WorksOnDao;
 
 import java.util.logging.Logger;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends ApplicationActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
   Logger logger = Logger.getLogger(MainActivity.class.getName());
-
-  protected void setup() {
-    Employee employee = EmployeeDao.findOrCreate();
-    employee.getEmail();
-    logger.info(employee.getEmail());
-    logger.info(employee.getName());
-    logger.info(employee.getPassword());
-    WorksOnDao.Dummy("CompanyHelper");
-    logger.info(String.format("%d", employee.getProjects().size()));
-    logger.info("dd");
-  }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +33,14 @@ public class MainActivity extends AppCompatActivity
       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
       setSupportActionBar(toolbar);
 
-      FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-      fab.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-              Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                      .setAction("Action", null).show();
-          }
-      });
+//      FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//      fab.setOnClickListener(new View.OnClickListener() {
+//          @Override
+//          public void onClick(View view) {
+//              Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                      .setAction("Action", null).show();
+//          }
+//      });
 
       DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
       ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -106,10 +92,10 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_project_list) {
+          startProjectListAcitivity();
+        } else if (id == R.id.nav_todo_list) {
+          startTodoListActivity();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

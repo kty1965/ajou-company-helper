@@ -2,11 +2,16 @@ package kr.ac.ajou.companyhelper.models.daos;
 
 import com.activeandroid.query.Select;
 import kr.ac.ajou.companyhelper.models.Employee;
+import kr.ac.ajou.companyhelper.models.Project;
 
 /**
  * Created by huy on 2016. 11. 8..
  */
-public class EmployeeDao {
+public class EmployeeDao  extends SqlDao<Employee>  {
+  public EmployeeDao() {
+    super(Employee.class);
+  }
+
   public static Employee findOrCreate() {
     return findOrCreate("employee@example.com");
   }

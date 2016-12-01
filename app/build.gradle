@@ -26,4 +26,7 @@ dependencies {
   compile 'com.android.support:appcompat-v7:22.2.0'
   compile 'com.android.support:design:22.2.0'
   compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+  // https://mvnrepository.com/artifact/joda-time/joda-time
+  compile group: 'joda-time', name: 'joda-time', version: '2.3'
+
 }
