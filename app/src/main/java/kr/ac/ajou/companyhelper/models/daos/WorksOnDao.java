@@ -23,4 +23,10 @@ public class WorksOnDao extends SqlDao<WorksOn> {
     }
     return true;
   }
+
+  public static WorksOn create(Employee employee, Project project) {
+    WorksOn worksOn = new WorksOn(employee, project);
+    worksOn.save();
+    return worksOn;
+  }
 }

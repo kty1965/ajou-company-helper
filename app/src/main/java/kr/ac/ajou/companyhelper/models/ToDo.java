@@ -21,7 +21,7 @@ public class ToDo extends Model {
   private Project project;
 
   public ToDo() {
-
+    this.state = "none";
   }
 
   public ToDo(String priority, String title, String content, Project project, Employee employee) {
@@ -30,6 +30,7 @@ public class ToDo extends Model {
     this.content = content;
     this.employee = employee;
     this.project = project;
+    this.state = "none";
   }
 
   public String getPriority() {
@@ -42,5 +43,17 @@ public class ToDo extends Model {
 
   public String getContent() {
     return content;
+  }
+
+  public String getState() {
+    return state;
+  }
+
+  public Employee getEmployee() {
+    return employee;
+  }
+
+  public Project getProject() {
+    return project;
   }
 }

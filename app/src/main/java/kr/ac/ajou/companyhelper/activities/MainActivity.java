@@ -1,20 +1,15 @@
 package kr.ac.ajou.companyhelper.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.activeandroid.ActiveAndroid;
 import kr.ac.ajou.companyhelper.R;
-import kr.ac.ajou.companyhelper.models.Employee;
-import kr.ac.ajou.companyhelper.models.daos.EmployeeDao;
-import kr.ac.ajou.companyhelper.models.daos.WorksOnDao;
 
 import java.util.logging.Logger;
 
@@ -95,7 +90,7 @@ public class MainActivity extends ApplicationActivity
         } else if (id == R.id.nav_project_list) {
           startProjectListAcitivity();
         } else if (id == R.id.nav_todo_list) {
-          startTodoListActivity();
+          startToDoListActivity();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
