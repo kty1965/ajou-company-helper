@@ -16,4 +16,29 @@ public class CommuteLog extends Model {
 
   @Column(name = "employee", onDelete = Column.ForeignKeyAction.CASCADE)
   private Employee employee;
+
+  public CommuteLog(DateTime commutedAt, Employee employee) {
+    this.commutedAt = commutedAt;
+    this.employee = employee;
+  }
+
+  public CommuteLog() {
+
+  }
+
+  public DateTime getCommutedAt() {
+    return commutedAt;
+  }
+
+  public Employee getEmployee() {
+    return employee;
+  }
+
+  public void setCommutedAt(DateTime commutedAt) {
+    this.commutedAt = commutedAt;
+  }
+
+  public void setEmployee(Employee employee) {
+    this.employee = employee;
+  }
 }

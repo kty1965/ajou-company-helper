@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  tools:context=".activities.commute.CommuteScanActivity">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/commute_msg"
+    android:textSize="20dp" android:layout_alignParentTop="true"
+    android:layout_alignRight="@+id/textView" android:layout_alignEnd="@+id/textView"/>
+  <Button android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          style="@style/AppTheme.AppBarOverlay"
+          android:text="Active"
+          android:id="@+id/toggle_scan"
+          android:clickable="true"
+          android:onClick="toggleScan" android:layout_gravity="center_horizontal|bottom" android:alpha="0.8"
+          android:textStyle="bold" android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true" android:layout_marginTop="30dp"/>
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="@string/desc_scanning"
+    android:id="@+id/textView" android:layout_gravity="center_horizontal|top"
+    android:background="#28f0f0f0"
+    android:gravity="center"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:textStyle="normal"
+    android:textSize="25dp"
+    android:layout_below="@+id/commute_msg" android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" android:layout_marginTop="57dp"/>
+
+</RelativeLayout>
