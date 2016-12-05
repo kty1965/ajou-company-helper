@@ -7,10 +7,10 @@ Ajou University Database Class Team project.
 - [JAVA 7 SDK](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
 - [Gradle latest ver.](https://gradle.org/getting-started-android-build/)
 - Android development kit
-  - buildToolsVersion: 22.0.1
   - compileSdkVersion: 22
   - minSdkVersion: 15
   - targetSdkVersion: 22
+  - buildToolsVersion: 22.0.1
   
 ## Features
 
