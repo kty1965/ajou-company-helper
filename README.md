@@ -16,3 +16,9 @@ Ajou University Database Class Team project.
 
 - BLE (bluetooth low energy) passive mode.
 - ActiveAndroid (SQLite)
+
+## Permissions
+```
+<uses-permission android:name="android.permission.BLUETOOTH"/>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+```
